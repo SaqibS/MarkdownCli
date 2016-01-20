@@ -25,6 +25,7 @@
                 string body = markdown.Transform(input);
                 string output = HtmlHeader + body + HtmlFooter;
                 writer.Write(output);
+                writer.Flush();
             }
             catch (Exception x)
             {
