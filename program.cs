@@ -2,7 +2,7 @@
 {
     using System;
     using System.IO;
-    using MarkdownSharp;
+    using Markdig;
 
     internal static class Program
     {
@@ -13,16 +13,13 @@
         {
             try
             {
-                TextReader reader;
-                TextWriter writer;
-                if (!ParseArgs(args, out reader, out writer))
+                if (!ParseArgs(args, out TextReader reader, out TextWriter writer))
                 {
                     return;
                 }
 
-                var markdown = new Markdown();
                 string input = reader.ReadToEnd();
-                string body = markdown.Transform(input);
+                string body = Markdown.ToHtml(input);
                 string output = HtmlHeader + body + HtmlFooter;
                 writer.Write(output);
                 writer.Flush();
