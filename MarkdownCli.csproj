@@ -7,14 +7,14 @@
     <ToolCommandName>markdown</ToolCommandName>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Title>Markdown CLI</Title>
-    <Version>1.0.0</Version>
+    <Version>1.1.0</Version>
     <Authors>Saqib Shaikh</Authors>
     <Description>Convert Markdown files to HTML from the command-line</Description>
     <RepositoryUrl>https://github.com/saqibs/MarkdownCli</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Markdig" Version="0.15.2" />
+    <PackageReference Include="Markdig" Version="0.20.0" />
   </ItemGroup>
 
 </Project>
